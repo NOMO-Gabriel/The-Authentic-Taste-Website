@@ -1,0 +1,3 @@
+1-dans la declaration du formulaire,passer un troisieme attribut tableau a votre champ
+-dans ce tableau,renseignrer un cle constraints qui est un tableau de contraintes
+-pour plus dinfo consulter la documentation

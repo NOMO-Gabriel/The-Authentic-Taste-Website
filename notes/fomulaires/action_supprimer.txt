@@ -1,0 +1,16 @@
+-aller dans config/framework et ajouter la ligne de code:
+  http_method_override: true pour activer la redefinitions des methodes par des champs masques
+
+  -creere la methode dans le controller sur une route:
+    #[Route('/recettes/{id}/delete' , name: 'recipe.delete' , methods: ['DELETE'])]
+    public function delete(Recipe $recipe, EntityManagerInterface $manager){
+        $manager->remove($recipe);
+        $manager->flush();
+        $this->addFlash('success','La recette a bien ete suprimee');
+        return $this->redirectToRoute('recipe.index');
+    }
+   -dans la vue creer un champ masque:
+                <form action="{{path('recipe.delete', {id: recipe.id }) }}" method="post">
+                <input type="hidden" name="_method" value="DELETE">
+                <button type="submit" class="btn btn-danger btn-sm">Supprimer</button>
+                </form>

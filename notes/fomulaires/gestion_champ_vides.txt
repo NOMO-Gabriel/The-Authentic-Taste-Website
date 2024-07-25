@@ -1,0 +1,3 @@
+1-aller dans la classe de definition du formulaire
+2-creer un ecouteur d'evenement dans la partie builder
+3-

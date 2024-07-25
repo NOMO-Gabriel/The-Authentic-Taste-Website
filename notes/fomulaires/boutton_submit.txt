@@ -1,0 +1,6 @@
+1-option1:
+
+aller dans la defition du formulaire et ajouter le code:
+    ->add('save',SubmitType::class, [
+        'label' => 'Envoyer'
+    ])

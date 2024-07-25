@@ -1,0 +1,6 @@
+cote controller
+-il faut commencer par ajouter le message a la memoire flash
+
+     $this->addFlash('success','La recette a bien ete modifiee');
+cote frontend
+

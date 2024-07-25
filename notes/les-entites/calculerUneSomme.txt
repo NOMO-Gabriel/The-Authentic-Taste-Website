@@ -1,0 +1,7 @@
+     public function findTotalDuration():int
+     {
+        return $this->createQueryBuilder('q')
+         ->select('SUM(q.duration) as total')
+         ->getQuery()
+         ->getFirstResult();
+     }

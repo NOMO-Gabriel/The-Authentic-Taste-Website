@@ -1,0 +1,3 @@
+-analyser un objet:
+
+ dump($nameObject) ou dd($nameObject)

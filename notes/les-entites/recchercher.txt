@@ -1,0 +1,10 @@
+1-pour la recherche,la selection
+passer le repository en paramatre de la fonction ou retirer
+utiliser l'une des fonctions find,findBy,findAll
+
+2-pour des requetes personnalisees:,
+
+aller dans le repository et creer les methodes correspondantes
+
+
+

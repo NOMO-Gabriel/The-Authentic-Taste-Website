@@ -1,0 +1,12 @@
+au lieu de passer le repositiory en parametres,on peut utliser directement la methode getRepository en EntityManagerInterface
+exemple:
+
+    #[Route('/recettes', name: 'recipe.index' )]
+    public function index( EntityManagerInterface $em ): Response
+    {
+//      $recipes = $repository->findAll();
+        $recipes =$em->getRepository(Recipe::class)->findWithDurationLowerThan(30);
+        return $this->render('recipe/index.html.twig', [
+            'recipes' => $recipes
+        ]);
+    }

@@ -1,0 +1,11 @@
+pour voir la liste de mes routes:
+
+php bin/console debug:router
+
+
+
+voici la liste de nos routes:
+
+-home
+    tester la route: http://127.0.0.1:8000/
+-recette/{slug}-{id}

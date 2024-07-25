@@ -1,0 +1,7 @@
+aller dans la classe de dfinition du formulaire et renseigner dans les parametres:
+-le type du champ
+-un tableau dans lequel vous renseignez le label
+-exemple:
+  ->add('save',SubmitType::class, [
+        'label' => 'Envoyer'
+    ])

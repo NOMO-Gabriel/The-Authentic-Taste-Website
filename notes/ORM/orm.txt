@@ -1,0 +1,7 @@
+-make:entity nomdel'entite a modifiee
+-choisir le champ a modifier
+-son type est relation
+-choisir la classe de liaison
+-choisir le type de liaison
+
+-effectuer la migration

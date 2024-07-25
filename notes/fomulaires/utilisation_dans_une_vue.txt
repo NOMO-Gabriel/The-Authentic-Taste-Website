@@ -1,0 +1,43 @@
+Pour utiliser un formulaire dans une vue:
+-cote controller:
+    -creer une route pour cette vue
+    -instancier l'objet de type formulaire avec la methode createForm
+    -le passer a la vue
+    exemple:
+
+      #[Route('/recettes/{id}/edit' , name: 'recipe.edit')]
+    //    public function edit(int $id ,RecipeRepository $repository):Response
+    //    {
+    //        $recipe =$repository->find($id);
+    ////        dd($recipe);
+    //        return $this->render('recipe/edit.html.twig',[
+    //            'recipe' => $recipe
+    //
+    //        ]);
+    //    }
+        public function edit(Recipe $recipe):Response
+        {
+
+            $form = $this->createForm(RecipeType::class , $recipe);
+            return $this->render('recipe/edit.html.twig',[
+                'recipe' => $recipe,
+                'form' => $form
+
+            ]);
+        }
+
+-cote vue:
+l'afficher avec la fonction form
+rassurrer vous de configurer le theme
+
+on peut egalement piloter l'affichage:
+
+exemple:
+{{%form_start(myForm)%}}
+    <div class='d-flex'>
+        {{form_row(myForm.title)}}
+        {{form_row(myForm.duration)}}
+    </div>
+    {{form_rest(myForm)}}
+
+{{%form_end(myForm)%}}

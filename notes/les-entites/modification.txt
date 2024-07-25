@@ -1,0 +1,21 @@
+pour la modification:
+1-aller dans le controller
+2-utiliser la classe EntityManagerInterface $em qui est responsable de memoriser les entites
+3-ensuites effectuer des modifications
+4-enregistrer avec la methode ->flush()
+
+en cas de probleme,desinstaller la dependance ux-turbo:
+composer remove symphony/ux-turbo
+
+exemple de modification:
+    #[Route('/recettes', name: 'recipe.index' )]
+    public function index( RecipeRepository $repository , EntityManagerInterface $em ): Response
+    {
+//      $recipes = $repository->findAll();
+        $recipes = $repository->findWithDurationLowerThan(30);
+        $recipes[1]->setTitle('spaguetti saute');
+        $em->flush();
+        return $this->render('recipe/index.html.twig', [
+            'recipes' => $recipes
+        ]);
+    }

@@ -1,0 +1,24 @@
+pour la suppression:
+1-aller dans le controller
+2-utiliser la classe EntityManagerInterface $em qui est responsable de memoriser les entites
+3-ensuites effectuer la suppression
+4-persister les donnees crees
+5-enregistrer avec la methode ->flush()
+
+
+
+
+exemple de suppression:
+
+    #[Route('/recettes', name: 'recipe.index' )]
+    public function index( RecipeRepository $repository , EntityManagerInterface $em ): Response
+    {
+//      $recipes = $repository->findAll();
+        $recipes = $repository->findWithDurationLowerThan(30);
+        $em->remove($recipes[0]);
+
+        $em->flush();
+        return $this->render('recipe/index.html.twig', [
+            'recipes' => $recipes
+        ]);
+    }

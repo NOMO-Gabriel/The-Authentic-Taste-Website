@@ -1,0 +1,14 @@
+-modifier messenger.yaml
+-decommenter la ligne :             sync: 'sync://'
+et mettre tous les async a sync.
+
+        routing:
+            Symfony\Component\Mailer\Messenger\SendEmailMessage: sync
+            Symfony\Component\Notifier\Message\ChatMessage: sync
+            Symfony\Component\Notifier\Message\SmsMessage: sync
+-pour mail pit,mettre l'executable dans le repertoire bin et  taper la commande:
+            chmod +x bin/mailpit
+et pour lancer le projet utiliser ./mailpit et y acceder au port 8085
+
+-dans le fichier env decommenter la ligne: # MAILER_DSN=null://null
+et remplacer par: MAILER_DSN=smptp://localhost:1025

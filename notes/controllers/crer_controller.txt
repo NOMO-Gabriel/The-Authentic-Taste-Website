@@ -1,0 +1,15 @@
+    1-Comment creer un controller?
+        -cerer une classe a la main
+        ou avec la console:
+            php bin/console make:controller nomDuController
+            Nb:php bin/console make: permet de savoir toutes options de la commande make
+
+            resultat: cette commande doit creer 2 fichiers: un fichier src/Controller/nomDuController.php et templates/..../index.html.twig
+
+
+            -votre controller et ecrire le code
+            -ensuite creer la route:
+
+            Dans cette formation,on a commence par
+            -HomeController
+            -RecipeController

@@ -1,0 +1,6 @@
+1-creer un formulaire avec la commande:
+
+    php bin/console make:form
+    remplir les infos du formulaire telles que :
+     -le nom
+     -l'entite asscociee

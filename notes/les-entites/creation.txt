@@ -1,0 +1,30 @@
+pour la creation:
+1-aller dans le controller
+2-utiliser la classe EntityManagerInterface $em qui est responsable de memoriser les entites
+3-ensuites effectuer la creation
+4-persister les donnees crees
+5-enregistrer avec la methode ->flush()
+
+
+
+ exemple de creation: on persite avant de flusher
+
+
+    #[Route('/recettes', name: 'recipe.index' )]
+    public function index( RecipeRepository $repository , EntityManagerInterface $em ): Response
+    {
+
+        $recipes = $repository->findWithDurationLowerThan(30);
+        $recipe = new Recipe();
+        $recipe ->setTitle('Barbe a papa');
+        $recipe ->setSlug('barbe-papa');
+        $recipe ->setContent('verser le sucre et tourner');
+        $recipe -> setDuration(5);
+        $recipe -> setCreatedAt(new \DateTimeImmutable());
+        $recipe -> setUpdatedAt(new \DateTimeImmutable());
+        $em->persist($recipe);
+        $em->flush();
+        return $this->render('recipe/index.html.twig', [
+            'recipes' => $recipes
+        ]);
+    }

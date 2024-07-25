@@ -1,0 +1,4 @@
+Pour lancer le serveur, utiliser la commande:
+    symfony serve
+ ou bien :
+    php -S localhost:8000 -t public

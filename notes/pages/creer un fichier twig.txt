@@ -1,0 +1,14 @@
+1 etendre du tempate de base
+{% extends 'base.html.twig' %}
+
+2-declarer le bloc body
+
+{% block body %}
+    ceci est le blog body
+{% endblock %}
+
+3-rendre la page a partir de son controller:
+
+render $this->render('chemin_vers_ma_page_twig')
+
+pour plus d'info,consulter la video :5

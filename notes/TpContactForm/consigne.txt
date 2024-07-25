@@ -1,0 +1,8 @@
+
+Ecrire un formulaire de contact dans lequel un utilisateur peut inscrire son nom,son email
+et un message.
+
+On utilisera un objet ContactFormDto pour representer les donnees de ce formulaire.
+
+on utilisera mailpit ou maildev  pour tester la reception d'email.
+

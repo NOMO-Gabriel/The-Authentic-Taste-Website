@@ -1,0 +1,16 @@
+Comment crer une route?
+
+1-methode1
+aller dans routes/routes.yaml et utiliser une syntaxe similaire a?
+    home:
+        path: /
+        controller: App\Controller\HomeController::index
+mais cette methode est la moin utilisee,voici l'autre facon:
+
+2-methode2:
+
+    directement en creant le controller,ajouter un attribut route,exemple:
+
+Cette deuxieme methode est bien plus pratique
+
+ tester: la route: http://127.0.0.1:8000/recette/pate-2

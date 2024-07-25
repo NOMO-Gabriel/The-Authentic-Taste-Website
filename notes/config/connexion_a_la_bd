@@ -1,0 +1,8 @@
+1-configurer la bd dans le fichier .env situe a la racine
+
+se rassurer de bien remplir les information de connection telles que:
+ la bonne version du serveur,le bon nom d'une base de donnee existante,
+ le mot de passe te le host
+
+2-creer une entite
+
