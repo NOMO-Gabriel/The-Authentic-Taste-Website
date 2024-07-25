@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\Routing\Requirement\Requirement;
 
-#[Route('leGout/categories' , name:'category.')]
+#[Route('leGout/categories' , name:'leGout.category.')]
 class CategoryController extends AbstractController
 {
     #[Route('/', name: 'index')]

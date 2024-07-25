@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\Routing\Requirement\Requirement;
 
-#[Route('leGout/recettes' , name:'recipe.')]
+#[Route('leGout/recettes' , name:'leGout.recipe.')]
 class RecipeController extends AbstractController
 {
     #[Route('/', name: 'index')]
