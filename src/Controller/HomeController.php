@@ -11,7 +11,7 @@ use Symfony\Component\Validator\Constraints\Required;
 #[Route('leGout', name:'leGout.')]
 class HomeController extends AbstractController
 {
-    #[Route('/', name: 'home')]
+    #[Route('/home', name: 'home')]
     public function home(): Response
     {
         return $this->render('home/index.html.twig');
@@ -20,13 +20,13 @@ class HomeController extends AbstractController
     #[Route('/home/{username}',name:'home.user',requirements:['username'=> Requirement::ASCII_SLUG])]
     public function homeUser():Response
     {
-        return $this->render('home/homeUser.html.twig');
+        return $this->render('home/user/homeUser.html.twig');
     }
 
-    #[Route('/home/{username}/admin', name:'admin.index',requirements:['username'=> Requirement::ASCII_SLUG])]
+    #[Route('/home/{username}/admin', name:'home.user.admin',requirements:['username'=> Requirement::ASCII_SLUG])]
     public function about():Response
     {
-        return $this->render('home/admin/index.html.twig');
+        return $this->render('home/user/admin/index.html.twig');
     }
 
     #[Route('/about', name:'about')]
